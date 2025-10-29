@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import LogoList from "../../assets/images/IndiaCountry/LogoList.png";
+import LogoList from "../../assets/images/IndiaCountry/logolist.png";
 
 const IndiaStateTipsReviews = () => {
   const [activeTab, setActiveTab] = useState("tips");
