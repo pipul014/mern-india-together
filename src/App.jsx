@@ -32,6 +32,7 @@ import IndiaStateHotels from "./pages/IndiaStateHotels";
 import IndiaStateShop from "./pages/IndiaStateShop";
 import IndiaStateThingsToDo from "./pages/IndiaStateThingsToDo";
 import ThingsToDoIndia from "./pages/ThingsToDoIndia";
+import IndiaCity from "./pages/IndiaCity";
 
 const App = () => {
   const isOwnerPath = useLocation().pathname.includes("owner");
@@ -82,7 +83,7 @@ const App = () => {
           <Route path="/india-state-shop" element={<IndiaStateShop />} />
 
           {/* city routes */}
-          <Route path="/india-city" element={<IndiaState />} />
+          <Route path="/india-city" element={<IndiaCity />} />
           <Route
             path="/india-city-things-to-do"
             element={<IndiaStateThingsToDo />}

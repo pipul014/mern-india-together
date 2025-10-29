@@ -15,7 +15,7 @@ import HeroBanner from "../components/HeroBanner";
 const IndiaCountry = () => {
   return (
     <>
-      <div className="mt-44">
+      <div className="mt-32">
         <div className="px-4 sm:px-6 md:px-8">
           <div className="flex items-center ">
             <p className="text-[#DC3545] text-base">Home</p>
