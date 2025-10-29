@@ -169,7 +169,7 @@ export default function DestinationTab() {
         {/* Search Button */}
         <button
           onClick={handleSearch}
-          className="w-full sm:w-[160px] md:w-[205px] h-[50px] sm:h-[55px] md:h-[60px] bg-[#DC3545] text-white font-roboto font-bold text-[16px] sm:text-[18px] md:text-[20px] uppercase transition-transform duration-200 hover:scale-105"
+          className="w-full sm:w-[160px] md:w-[205px] h-[50px] sm:h-[55px] md:h-[60px] bg-[#DC3545] text-white font-roboto font-bold text-[16px] sm:text-[18px] md:text-[20px] uppercase transition-transform duration-200 hover:scale-105 cursor-pointer"
         >
           Search
         </button>
