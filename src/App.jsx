@@ -23,7 +23,9 @@ import ThingsToDoDomestic from "./pages/ThingsToDoDomestic";
 import Attraction from "./pages/Attraction";
 import LoginTravelPartnerAdvertise from "./pages/LoginTravelPartnerAdvertise";
 import AdvertiseWithUsForm from "./pages/AdvertiseWithUsForm";
-import IndiathingsToDo from "./pages/IndiathingsToDo";
+// import IndiathingsToDo from "./pages/IndiaThingsToDo";
+import IndiaThingsToDo from "./pages/IndiaThingsToDo";
+
 import IndiaHotels from "./pages/IndiaHotels";
 import IndiaEatDrink from "./pages/IndiaEatDrink";
 import IndiaShop from "./pages/IndiaShop";
@@ -63,7 +65,8 @@ const App = () => {
 
           {/* country routes */}
           <Route path="/india-country" element={<IndiaCountry />} />
-          <Route path="/india-things-to-do" element={<IndiathingsToDo />} />
+          {/* <Route path="/india-things-to-do" element={<IndiathingsToDo />} /> */}
+          <Route path="/india-things-to-do" element={<IndiaThingsToDo />} />
           <Route path="/india-hotels" element={<IndiaHotels />} />
           <Route path="/india-eat-drink" element={<IndiaEatDrink />} />
           <Route path="/india-shop" element={<IndiaShop />} />

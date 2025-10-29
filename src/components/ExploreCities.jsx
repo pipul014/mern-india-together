@@ -5,7 +5,7 @@ import image1 from "../assets/images/destinations/image-5.png";
 import image2 from "../assets/images/destinations/image-4.png";
 import image3 from "../assets/images/destinations/image-3.png";
 
-// Sample data
+// Sample data of cities
 const cities = [
   { name: "Varanasi", desc: "Spiritual Heartbeat of India", img: image1 },
   { name: "New Delhi", desc: "Where History meets Modernity", img: image2 },
