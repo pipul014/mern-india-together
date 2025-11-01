@@ -118,26 +118,64 @@ const HeroBanner = ({ heading }) => {
   ];
 
   // ✅ Define single hero image per route
+  // const pageHeroMap = {
+  //   "/destinations": {
+  //     image: home1,
+  //     text: "Explore the world's most loved destinations.",
+  //   },
+  //   "/hotels": {
+  //     image: home2,
+  //     text: "Find comfort in every corner of the world.",
+  //   },
+  //   "/things-to-do": { image: home3, text: "Endless adventures await." },
+  //   "/eat-drink": { image: home4, text: "Taste the world’s finest cuisines." },
+  //   "/shop": {
+  //     image: home5,
+  //     text: "Discover local treasures and luxury brands.",
+  //   },
+  //   "/tribes-of-india": {
+  //     image: home7,
+  //     text: "Step into the vibrant world of India’s tribes - keepers of traditions.",
+  //   },
+  //   "/kids-special": { image: home3, text: "Adventures kids will love!" },
+  // };
+
   const pageHeroMap = {
     "/destinations": {
       image: home1,
       text: "Explore the world's most loved destinations.",
+      label: "Destinations",
     },
     "/hotels": {
       image: home2,
-      text: "Find comfort in every corner of the world.",
+      text: "Book your dream stay today.",
+      label: "Hotels",
     },
-    "/things-to-do": { image: home3, text: "Endless adventures await." },
-    "/eat-drink": { image: home4, text: "Taste the world’s finest cuisines." },
+    "/things-to-do": {
+      image: home3,
+      text: "Find your perfect trip - personalised packages, designed just for you.",
+      label: "Things To Do",
+    },
+    "/eat-drink": {
+      image: home4,
+      text: "Find iconic dishes that a city made famous",
+      label: "Eat & Drink",
+    },
     "/shop": {
       image: home5,
-      text: "Discover local treasures and luxury brands.",
+      text: "Find top recommended products that a city made famous",
+      label: "Shop",
     },
     "/tribes-of-india": {
-      image: home6,
-      text: "Discover the vibrant cultures of India’s tribes.",
+      image: home7,
+      text: "Step into the vibrant world of India’s tribes - keepers of traditions.",
+      label: "Tribes of India",
     },
-    "/kids-special": { image: home7, text: "Adventures kids will love!" },
+    "/kids-special": {
+      image: home3,
+      text: "All you need to know about family-friends destinations.",
+      label: "Kids Special",
+    },
   };
 
   // ✅ Determine slides based on current route
@@ -163,8 +201,10 @@ const HeroBanner = ({ heading }) => {
   const prevSlide = () =>
     setCurrent((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
 
+  const currentPage = pageHeroMap[currentPath];
+
   return (
-    <section className="relative h-[480px] md:h-[500px] lg:h-[600px] w-full overflow-hidden">
+    <section className="relative h-[480px]  w-full overflow-hidden">
       {/* Slides Layered for Smooth Fade */}
       {slides.map((slide, index) => (
         <div
@@ -199,22 +239,48 @@ const HeroBanner = ({ heading }) => {
         </>
       )}
 
+      {currentPath !== "/" && (
+        <div className="absolute top-26 left-7 w-[44px] h-[44px] bg-white overflow-hidden flex items-center justify-center p-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="25"
+            height="19"
+            viewBox="0 0 25 19"
+            fill="none"
+            className="stroke-black"
+          >
+            <path
+              d="M23.4688 17.7331H10.6687M23.4688 9.39974H1.06875M13.8687 1.06641H1.06875"
+              strokeWidth="2.13333"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </div>
+      )}
       {/* Heading */}
       <div className="absolute left-4 sm:left-8 md:left-16 lg:left-20 bottom-16 sm:bottom-24 lg:bottom-28 max-w-[90%] sm:max-w-[600px] md:max-w-[720px] lg:max-w-[820px] animate-fade-in">
-        <h1 className="text-white text-[18px] sm:text-[22px] md:text-[28px] lg:text-[32px] font-semibold leading-snug drop-shadow-lg">
+        {/* ✅ Dynamic Label Box */}
+        {currentPath !== "/" && currentPage && (
+          <div className="inline-flex items-center justify-center gap-[10px] px-[14px] py-[6px] bg-[#DC3545] rounded">
+            <div className="text-white text-[13px] font-roboto font-bold uppercase tracking-[1.3px] break-words">
+              {currentPage.label}
+            </div>
+          </div>
+        )}
+
+        <h1 className="w-[841px] text-white text-[42px] font-roboto font-bold break-words">
           {heading || slides[current].text}
         </h1>
       </div>
 
       {/* Lucky Draw Button */}
-      {currentPath === "/" && (
-        <div className="absolute left-4 sm:left-6 bottom-6 sm:bottom-10 md:bottom-14">
-          <button className="flex items-center justify-center bg-black/70 hover:bg-black rounded-full border border-white w-[40px] h-[40px] sm:w-[45px] sm:h-[45px] md:w-[50px] md:h-[50px] flex-col text-[7px] sm:text-[8px] md:text-[8.75px] font-semibold text-white font-serif leading-none shadow-lg transition-all duration-300">
-            <span>LUCKY</span>
-            <span>DRAW!</span>
-          </button>
-        </div>
-      )}
+      <div className="absolute left-4 sm:left-6 bottom-6 sm:bottom-10 md:bottom-14">
+        <button className="flex items-center justify-center bg-black/70 hover:bg-black rounded-full border border-white w-[40px] h-[40px] sm:w-[45px] sm:h-[45px] md:w-[50px] md:h-[50px] flex-col text-[7px] sm:text-[8px] md:text-[8.75px] font-semibold text-white font-serif leading-none shadow-lg transition-all duration-300">
+          <span>LUCKY</span>
+          <span>DRAW!</span>
+        </button>
+      </div>
 
       {/* Dots (only for home) */}
       {currentPath === "/" && (

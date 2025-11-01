@@ -7,6 +7,7 @@ import DiscoverSection from "../components/DiscoverSection";
 import ExploreCities from "../components/ExploreCities";
 import Journeys from "../components/Journeys";
 import GrayBlock from "../components/GrayBlock";
+import { Toaster } from "react-hot-toast";
 
 const Destinations = () => {
   return (
@@ -18,6 +19,7 @@ const Destinations = () => {
       <DiscoverSection />
       <GrayBlock />
       <WorldAttractions />
+      <Toaster position="top-right" reverseOrder={false} />
       <MembershipCTA />
       <Footer />
     </>

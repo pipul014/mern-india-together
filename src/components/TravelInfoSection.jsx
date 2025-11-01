@@ -19,6 +19,7 @@ import React from "react";
 import PopularDestinations from "./PopularDestinations";
 import MembershipCTA from "./MembershipCTA";
 import Disclaimer from "./Disclaimer";
+import { Toaster } from "react-hot-toast";
 
 const MainContent = () => {
   return (
@@ -29,6 +30,7 @@ const MainContent = () => {
       </section>
 
       {/* Membership Call-to-Action Section */}
+      <Toaster position="top-right" reverseOrder={false} />
       <section className="animate-fadeIn delay-100">
         <MembershipCTA />
       </section>

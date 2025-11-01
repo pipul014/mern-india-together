@@ -26,6 +26,7 @@ import MembershipCTA from "../components/MembershipCTA";
 import KidsFriendlyRestaurants from "../components/KidsFriendlyRestaurants";
 import KidsFamilyHolidayPackages from "../components/KidsFamilyHolidayPackages";
 import GrayBlock from "../components/GrayBlock";
+import { Toaster } from "react-hot-toast";
 
 const Shop = () => {
   return (
@@ -37,6 +38,7 @@ const Shop = () => {
       <IncredibleIndia />
       <GrayBlock />
       <KidsFriendlyRestaurants />
+      <Toaster position="top-right" reverseOrder={false} />
       <MembershipCTA />
       <Footer />
     </>

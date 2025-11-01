@@ -28,17 +28,22 @@ import MembershipCTA from "../components/MembershipCTA";
 import KidsFriendlyRestaurants from "../components/KidsFriendlyRestaurants";
 import KidsFamilyHolidayPackages from "../components/KidsFamilyHolidayPackages";
 import GrayBlock from "../components/GrayBlock";
-
+import TribalTourPackages from "../components/TribalPackage/TribalTourPackages";
+import RegionTribalTourPackages from "../components/TribalPackage/RegionTribalTourPackages";
+import { Toaster } from "react-hot-toast";
+import AdivasiSection from "../components/TribalPackage/AdivasiSection";
 const TribesOfIndia = () => {
   return (
     <>
       {/* <Hero /> */}
       <HeroBanner />
-
-      <KidsFamilyHolidayPackages />
-      <IncredibleIndia />
+      <TribalTourPackages />
+      {/* <IncredibleIndia /> */}
+      <AdivasiSection />
       <GrayBlock />
-      <KidsFriendlyRestaurants />
+      {/* <KidsFriendlyRestaurants /> */}
+      <RegionTribalTourPackages />
+      <Toaster position="top-right" reverseOrder={false} />
       <MembershipCTA />
       <Footer />
     </>

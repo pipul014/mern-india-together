@@ -12,7 +12,7 @@ import IndiaCityPlacesSection from "../components/IndiaCity/IndiaCityPlacesSecti
 import Footer from "../components/Footer";
 import HeroBanner from "../components/HeroBanner";
 import CityTrendingThingsToDo from "../components/IndiaCity/CityTrendingThingsToDo";
-import CityExploreMadurai from "../components/IndiaCity/CityExploreMadurai";
+// import CityExploreMadurai from "../components/IndiaCity/CityExploreMadurai";
 
 const IndiaCountry = () => {
   return (
@@ -40,7 +40,7 @@ const IndiaCountry = () => {
         <IndiaCityAttractions />
         <div className="px-4 sm:px-6 md:px-8">
           {/* <IndiaCityState /> */}
-          <CityExploreMadurai />
+          {/* <CityExploreMadurai /> */}
           <CityTrendingThingsToDo />
           <IndiaCityTogether />
           <IndiaCityTipsReviews />

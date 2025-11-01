@@ -101,7 +101,7 @@ export default function DestinationTab() {
       </div>
 
       {/* Subtitle */}
-      <div className="mt-8 lg:mt-0 lg:absolute left-0 lg:left-8 top-[41px] flex flex-wrap gap-2 justify-center lg:justify-start text-center lg:text-left opacity-0 animate-fadeIn">
+      <div className="mt-8 lg:mt-0 lg:absolute left-0 lg:left-8 top-[41px] flex flex-wrap gap-2 justify-center lg:justify-start text-center lg:text-left opacity-0 animate-fadeIn ">
         <p className="text-white italic text-[14px] sm:text-[15px] md:text-[16px] font-medium font-roboto">
           We offer +400 charming destinations to discover....
         </p>

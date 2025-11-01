@@ -8,11 +8,13 @@ import Footer from "../components/Footer";
 import ExploreDestinations from "../components/ExploreDestinations";
 import DealsGrid from "../components/DealsGrid";
 import TravelInfoSection from "../components/TravelInfoSection";
+import { Toaster } from "react-hot-toast";
 
 const Home = () => {
   return (
     <>
       {/* <Hero /> */}
+
       <HeroBanner />
       <DestinationTab />
       <IncredibleIndia />
